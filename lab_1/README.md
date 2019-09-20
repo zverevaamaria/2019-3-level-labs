@@ -11,11 +11,14 @@
 
 ```json
 {
-    "url": "http://",
-    "creationDate": "Jan 1, 1970. 9:30",
+    "url": "https://lenta.ru/rubrics/sport",
+    "creationDate": "2019-09-19",
     "articles": [
         {
             "title": "Amazing news about MMA"
+        },
+        {
+            "title": "Champions League Finals"
         }
     ]
 }
