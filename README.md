@@ -29,3 +29,4 @@
 ## Материалы
 
 * [Презентация к практическому занятию №1](https://yatarkan.github.io/bi-hse-2019-practice-1/)
+* [Презентация к практическому занятию №2](https://yatarkan.github.io/bi-hse-2019-practice-2/)
