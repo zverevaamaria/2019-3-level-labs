@@ -6,7 +6,6 @@ import example.govno3.model.Article;
 import example.govno3.model.Articles;
 import example.govno3.service.SiteParsingService;
 import example.govno3.utils.AppProperty;
-import example.govno3.utils.StringUtils;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
@@ -67,7 +66,7 @@ public class DefaultSiteParsingService implements SiteParsingService {
 
         File file = new File(path, AppProperty.getProperty("fileName"));
         try {
-            String date = new SimpleDateFormat("YYYY.MM.dd").format(new Date());
+            String date = new SimpleDateFormat("YYYY.MM.dd 'at' HH:mm").format(new Date());
             Articles articles = new Articles(AppProperty.getProperty("url"), date, articleList);
             mapper.writeValue(file, articles);
         } catch (IOException e) {
