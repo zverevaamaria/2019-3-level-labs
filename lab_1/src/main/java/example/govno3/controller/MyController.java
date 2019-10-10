@@ -19,7 +19,7 @@ public class MyController {
     public String handleRequest(Model model) {
         Articles articles = siteParsingService.readJsonFile(
                 AppProperty.getProperty("pathToSave") + AppProperty.getProperty("fileName"));
-        model.addAttribute("news", articles.getArticles());
+        model.addAttribute("tit", articles.getArticles());
         model.addAttribute("creationDate", articles.getCreationDate());
         model.addAttribute("url", articles.getUrl());
         return "news";
