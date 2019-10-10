@@ -34,19 +34,19 @@ public class Govno3ApplicationTests {
     @Autowired
     protected SiteParsingService siteParsingService;
 
-    @Test
+    @Test//проверка на то, забирает ли он инфу с нашего урла
     public void getHtmlPageTest() {
         Document doc = siteParsingService.getHtmlPage(AppProperty.getProperty("url"));
         Assert.assertNotNull(doc);
     }
 
-    @Test
+    @Test//тест на то, получиться ли у него забрать инфу с несуществующей страницы, которая похожа на урл
     public void getHtmlPageExpectedNullTest() {
         Document doc = siteParsingService.getHtmlPage("https://url.com");
         Assert.assertNull(doc);
     }
 
-    @Test
+    @Test//тест на то, получиться ли у него забрать инфу с несуществующей страница, которая даже не похожа на урл
     public void getHtmlPageExpectedExceptionTest() {
         try {
             siteParsingService.getHtmlPage("url");
@@ -57,6 +57,7 @@ public class Govno3ApplicationTests {
     }
 
     @Test
+    //тест на то, совпадает ли JSON файл и выводимые нами заголовки
     public void testPageIsValidTest() {
         try (InputStream htmlSteam = this.getClass().getResourceAsStream("/test.html");
              InputStream jsonStream = this.getClass().getResourceAsStream("/articles.json")) {
