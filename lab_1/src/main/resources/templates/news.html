@@ -2,8 +2,8 @@
 <html xmlns:th="http://www.w3.org/1999/xhtml">
 <body>
 <div>
-<span th:each="article: ${articles}">
-    <span th:text="${article}"></span><br/>
+<span th:each="article, iter : ${articles}">
+    <span th:text="${(iter.index + 1) + '. ' + article}"></span><br/>
 </span>
 </div>
 <span>

@@ -8,6 +8,13 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
@@ -27,7 +34,10 @@
     <property name="RequestMappingsPanelWidth1" value="75" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../2019-3-level-labs-master" />
+    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.0" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -64,6 +74,13 @@
       <workItem from="1570622860586" duration="4373000" />
       <workItem from="1570650778923" duration="1361000" />
       <workItem from="1570685696096" duration="3235000" />
+      <workItem from="1570706959577" duration="21991000" />
+      <workItem from="1571000002796" duration="1079000" />
+      <workItem from="1571069474651" duration="1161000" />
+      <workItem from="1571162514909" duration="18879000" />
+      <workItem from="1571248616269" duration="984000" />
+      <workItem from="1571250175404" duration="35000" />
+      <workItem from="1571250300238" duration="10434000" />
     </task>
     <servers />
   </component>
@@ -82,5 +99,12 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <default-breakpoints>
+        <breakpoint enabled="true" type="javascript-exception" />
+      </default-breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

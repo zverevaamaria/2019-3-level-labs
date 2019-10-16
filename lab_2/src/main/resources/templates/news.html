@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8">
+    <title>Парсинг страницы</title>
+</head>
+<body>
+<h2>
+    <p align="center"> Новости спорта с портала <span th:text="${ url}"></span> на <span th:text="${date}"/> </p>
+</h2>
+<p align="center"> <button type="button" th:onclick="|window.location.href=''|">Refresh</button></p>
+<div>
+    <h3>
+        <span th:each="article : ${articles}">
+        <li>
+    <span th:text="${ article}"></span>
+        </li>
+</span>
+    </h3>
+</div>
+<span>
+
+</span>
+</body>
+</html>
