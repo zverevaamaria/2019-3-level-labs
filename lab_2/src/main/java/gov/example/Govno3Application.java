@@ -1,4 +1,4 @@
-package hse.lab;
+package gov.example;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

@@ -1,4 +1,4 @@
-package hse.lab.service;
+package gov.example.service;
 
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
@@ -62,9 +62,12 @@ public class SiteParsing {
     public List<String> findArticles(Document document) {
         List<String> newsList = new ArrayList<String>();
         List<Elements> elementsList = new ArrayList<>();
-        elementsList.add(document.select("a[class=item-sport_big__title]"));
-        elementsList.add(document.select("span[class=item-sport_medium__title]"));
-        elementsList.add(document.select("span[class=item-sport_online__title]"));
+            elementsList.add(document.select("a[class=item-sport_big__title]"));
+            elementsList.add(document.select("span[class=item-sport_medium__title]"));
+            elementsList.add(document.select("span[class=item-sport_online__title]"));
+            elementsList.add(document.select("div[class=card-item__title]"));
+            elementsList.add(document.select("div[class=material-item__title]"));
+            elementsList.add(document.select("a[class=mkh2]"));
         for (Elements elements : elementsList) {
             for (Element element : elements) {
                 String m = element.text();
