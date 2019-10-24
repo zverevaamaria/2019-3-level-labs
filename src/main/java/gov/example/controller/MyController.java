@@ -21,17 +21,21 @@ public class MyController {
     @Autowired
     private SiteParsing newsParser;
 
+
     @RequestMapping(value = "/rbk", method = RequestMethod.GET, produces = MediaType.TEXT_HTML_VALUE)
     public ModelAndView getNewsRBC() {
-        ModelAndView modelAndView = new ModelAndView("news");
-        String cd = newsParser.Date();
-        List<String> articles = newsParser.findArticles(newsParser.getHtmlPage(RBK_URL));
-        newsParser.publishReport(SiteParsing.PATH, RBK_URL, articles, cd );
-        modelAndView.addObject("articles", articles);
-        modelAndView.addObject("url", RBK_URL);
-        modelAndView.addObject("date", cd);
-        return modelAndView;
-    }
+            ModelAndView modelAndView = new ModelAndView("news");
+            String cd = newsParser.Date();
+            List<String> articles = newsParser.findArticles(newsParser.getHtmlPage(RBK_URL));
+            newsParser.publishReport(SiteParsing.PATH, RBK_URL, articles, cd);
+            modelAndView.addObject("articles", articles);
+            modelAndView.addObject("url", RBK_URL);
+            modelAndView.addObject("date", cd);
+            modelAndView.addObject("m1", RBK_URL);
+            return modelAndView;
+
+        }
+
     @RequestMapping(value = "/match", method = RequestMethod.GET, produces = MediaType.TEXT_HTML_VALUE)
     public ModelAndView getNewsMatch() {
         ModelAndView modelAndView = new ModelAndView("news");
@@ -41,6 +45,7 @@ public class MyController {
         modelAndView.addObject("articles", articles);
         modelAndView.addObject("url", MATCH);
         modelAndView.addObject("date", cd);
+        modelAndView.addObject("m2", MATCH);
         return modelAndView;
     }
     @RequestMapping(value = "/mk", method = RequestMethod.GET, produces = MediaType.TEXT_HTML_VALUE)
@@ -52,6 +57,8 @@ public class MyController {
         modelAndView.addObject("articles", articles);
         modelAndView.addObject("url", Champ);
         modelAndView.addObject("date", cd);
+        modelAndView.addObject("m3", Champ);
         return modelAndView;
     }
+
 }
